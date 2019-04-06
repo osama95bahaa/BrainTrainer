@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.man.braintrainer.MainActivity">
+
+    <Button
+        android:text="GO!"
+        android:layout_width="@android:dimen/thumbnail_height"
+        android:layout_height="@android:dimen/thumbnail_width"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/startButtonID"
+        android:textSize="70sp"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center"
+        android:onClick="startButton"
+        android:fontFamily="monospace"
+        android:typeface="monospace"
+        android:textAllCaps="false"
+        android:background="@android:color/holo_green_light"
+        android:visibility="visible" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:visibility="invisible"
+            android:id="@+id/button0"
+            android:onClick="buttonPressed"
+            android:textSize="30sp"
+            android:textStyle="normal|bold|italic" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:visibility="invisible"
+            android:id="@+id/button1"
+            android:onClick="buttonPressed"
+            android:textSize="30sp"
+            android:textStyle="normal|bold|italic" />
+
+        <Button
+            android:layout_column="0"
+            android:layout_row="1"
+            android:id="@+id/button2"
+            android:visibility="invisible"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="buttonPressed"
+            android:textSize="30sp"
+            android:textStyle="normal|bold|italic" />
+
+        <Button
+            android:layout_column="1"
+            android:layout_row="1"
+            android:id="@+id/button3"
+            android:visibility="invisible"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:onClick="buttonPressed"
+            android:textSize="30sp"
+            android:textStyle="normal|bold|italic" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/timer"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:textStyle="normal|bold"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/gridLayout"
+        android:layout_alignStart="@+id/gridLayout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/finalScore"
+        android:textSize="30sp" />
+
+    <Button
+        android:text="Play Again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/startButtonID"
+        android:layout_toEndOf="@+id/startButtonID"
+        android:id="@+id/playAgainButton"
+        android:onClick="playAgain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/timer"
+        android:layout_toRightOf="@+id/startButtonID"
+        android:layout_toEndOf="@+id/startButtonID"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:id="@+id/score" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/finalScore"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/correctOrWrong"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timer"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/equations"
+        android:textSize="20sp" />
+
+</RelativeLayout>
